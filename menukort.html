@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tusci Ristorante</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/qaa5och.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="menu_billede"></div>
+    </header>
+
+    <div class="back">
+        <a href="index.html"> <img src="imgs/ui.svg" alt="go_back"></a>
+    </div>
+    <div class="logo_menu"> </div>
+    <h1>Menukort</h1>
+
+    <nav>
+        <div class="filter valgt" data-ret="alle">Menukort</div>
+        <div class="filter" data-ret="forret">Primo</div>
+        <div class="filter" data-ret="pasta">Pasta</div>
+        <div class="filter" data-ret="pizza">Pizza</div>
+        <div class="filter" data-ret="hovedret">Secondo</div>
+        <div class="filter" data-ret="dessert">Dessert</div>
+    </nav>
+
+    <div id="popup" class="hidden">
+        <div id="luk"><button>X</button></div>
+        <div id="indhold"></div>
+    </div>
+
+    <div id="liste"></div>
+
+    <footer>
+        <div id="kontakt">
+            <p>Kontakt os: <br> Tusci Ristorante <br>
+            </p>
+
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
