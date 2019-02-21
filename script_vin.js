@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", sidenVises);
 
 function sidenVises() {
 
+    document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+
+
     async function getJson() {
         console.log("JSON hentes");
         let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1FZ2_LkPY3m_u61zVejJFAWXq5PKRgY1CNLmh59Q2EMU");
@@ -70,6 +73,18 @@ function sidenVises() {
 
     getJson();
     console.log("json");
+}
+
+function toggleMenu() {
+    console.log("Toogle menu");
+    document.querySelector("#menu").classList.toggle("hidden");
+
+    let erSkjult = document.querySelector("#menu").classList.contains("hidden");
 
 
+    if (erSkjult == true) {
+        document.querySelector("#menuknap").textContent = "☰";
+    } else {
+        document.querySelector("#menuknap").textContent = "X";
+    }
 }

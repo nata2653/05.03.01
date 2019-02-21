@@ -1,5 +1,6 @@
 body {
     background-color: #F2F2F2;
+    margin: 0;
 }
 
 #liste {
@@ -37,24 +38,23 @@ nav .filter:hover {
     border-top: none;
 }
 
-.back {
-    width: 50px;
-    height: 50px;
-    padding-top: 10px;
-    cursor: pointer;
+nav a {
+    display: inline-table;
+    border-top: 3px black solid;
+    color: #343333;
+    padding: 15px;
+    margin: 10px;
+    font-size: 1.2rem;
+
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
-.logo_menu {
-    background-image: url(imgs/logo_tusci.svg);
-    height: 120px;
-    width: 200px;
-    background-size: 120px;
-    background-repeat: no-repeat;
-
-    position: absolute;
-    top: 510px;
-    left: 80%;
+nav a:hover {
+    border-bottom: 3px black solid;
+    border-top: none;
+    text-decoration: none;
 }
+
 
 .price {
     text-align: right;
@@ -95,6 +95,17 @@ p {
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
+a {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .hidden {
     display: none;
 }
@@ -103,7 +114,6 @@ p {
     box-sizing: border-box;
     width: 90vw;
     height: 90vw;
-    margin: auto;
 }
 
 #luk {
@@ -115,15 +125,141 @@ p {
 }
 
 #popup {
-    background-color: rgba(235, 235, 235, 0.94);
+    background-color: rgba(242, 242, 242, 0.85);
     width: 100vw;
-    height: 100vh;
-    margin: auto;
+    height: 90vh;
+    margin: 0 auto;
     padding: 10px;
     z-index: 3;
-    border-radius: 10px;
     top: 2vw;
+    position: fixed;
+}
+
+#popup img {
+    width: 300px;
+}
+
+/*-------------------BURGERMENU-------------------*/
+
+#menuknap {
+    display: block;
+    text-align: left;
+    font-size: 3rem;
+    font-family: 'helvetica', sans-serif;
+    cursor: pointer;
+    color: white;
+    padding: 10px 0;
+}
+
+#menu {
+    transition: transform 0.3s;
+    list-style-type: none;
+    transform-origin: top left;
+    background-color: rgba(252, 252, 252, 0.87);
+    width: 300px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+#burger {
+    width: 200px;
+    z-index: 2;
+}
+
+#menu li {
+    padding-top: 30px;
+    display: block;
+    text-align: left;
+}
+
+#menu a {
+    font-size: 1rem;
+}
+
+/*-------------------INDEX-------------------*/
+.splash {
+    background-image: url("imgs/pizza.jpg");
+    height: 70vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.front_logo {
+    background-image: url(imgs/logo_tusci.svg);
+    height: 500px;
+    width: 500px;
+    background-size: 400px;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.book {
+    border: 2px black solid;
     text-align: center;
+    width: 100px;
+    background-color: white;
+
+
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+
+#section {
+    background-color: white;
+    padding: 10px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    margin: 100px;
+
+    font-size: 1.2rem;
+}
+
+.info p {
+    width: 300px;
+    padding: 0px 0px 50px 50px;
+}
+
+.info h2 {
+    padding-left: 50px;
+}
+
+#billeder_front {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px;
+    padding: 50px;
+}
+
+#billeder_front img {
+    height: auto;
+}
+
+.today {
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.open {
+    text-align: center;
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    margin: 100px;
+
+    font-size: 1.2rem;
 }
 
 /*-------------------MENUKORT-------------------*/
@@ -135,4 +271,47 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+.back {
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+/*-------------------VINKORT-------------------*/
+.vin_billede {
+    background-image: url("imgs/vinmark.jpg");
+    height: 60vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.visteRetter img {
+    height: 200px;
+    width: auto;
+}
+
+/*-------------------FOOTER-------------------*/
+
+footer {
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.front_footer {
+    background-color: #F2F2F2;
+}
+
+#some img {
+    width: 25px;
+    padding: 15px;
+    cursor: pointer;
 }

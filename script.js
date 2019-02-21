@@ -6,6 +6,7 @@ let filter = "alle";
 document.addEventListener("DOMContentLoaded", sidenVises);
 
 function sidenVises() {
+    document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 
     async function getJson() {
         console.log("JSON hentes");
@@ -34,7 +35,7 @@ function sidenVises() {
                 dest.lastElementChild.addEventListener("click", åbn);
 
                 function åbn() {
-                    document.querySelector("#indhold").innerHTML = `<article class="person">
+                    document.querySelector("#indhold").innerHTML = `<article class="ret">
  <h2>${ret.navn}</h2>
   <div> <img src="imgs/${ret.billede}.jpg"> </div>
                             <p><strong> Pris: </strong> ${ret.pris}</p>
@@ -70,6 +71,18 @@ function sidenVises() {
 
     getJson();
     console.log("json");
+}
+
+function toggleMenu() {
+    console.log("Toogle menu");
+    document.querySelector("#menu").classList.toggle("hidden");
+
+    let erSkjult = document.querySelector("#menu").classList.contains("hidden");
 
 
+    if (erSkjult == true) {
+        document.querySelector("#menuknap").textContent = "☰";
+    } else {
+        document.querySelector("#menuknap").textContent = "X";
+    }
 }

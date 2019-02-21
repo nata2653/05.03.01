@@ -7,18 +7,37 @@
     <title>Tusci Ristorante</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/qaa5och.css">
+
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <div class="vin_billede">
+            <nav id="burger">
+                <div id="menuknap">☰</div>
+                <ul id="menu" class="hidden">
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="menukort.html">Menukort</a></li>
+                    <li><a href="vinkort.html">Vinkort</a></li>
+                    <li><a href="info.html">Informationer</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="back">
+        <a href="index.html"> <img src="imgs/ui.svg" alt="go_back"></a>
+    </div>
+    <div class="logo_menu"> </div>
 
     <h1>Vinkort</h1>
-
-    <div id="container"></div>
-    <div class="filter valgt" data-ret="alle">Vinkort</div>
-    <div class="filter" data-ret="roedvin">Rødvin</div>
-    <div class="filter" data-ret="hvidvin">Hvidvin</div>
-    <div class="filter" data-ret="rose">Rose</div>
+    <nav>
+        <div class="filter valgt" data-ret="alle">Vinkort</div>
+        <div class="filter" data-ret="roedvin">Rødvin</div>
+        <div class="filter" data-ret="hvidvin">Hvidvin</div>
+        <div class="filter" data-ret="rose">Rose</div>
+    </nav>
 
     <div id="popup" class="hidden">
         <div id="luk"><button>X</button></div>
@@ -27,10 +46,18 @@
 
     <div id="liste"></div>
 
-
-
-
-    <footer></footer>
+    <footer>
+        <div id="kontakt">
+            <a href="info.html">Kontakt os</a><br>
+            <p>Kongensgade 2D <br>
+                3000 Helsingør
+            </p>
+        </div>
+        <div id="some">
+            <img src="imgs/instagram.png" alt="instagram">
+            <img src="imgs/facebook.png" alt="facebook">
+        </div>
+    </footer>
     <script src="script_vin.js"></script>
 </body>
 
