@@ -1,3 +1,4 @@
+html,
 body {
     background-color: #F2F2F2;
     margin: 0;
@@ -79,6 +80,26 @@ nav a:hover {
     padding: 5px;
 }
 
+.ret {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.sectionwrapper {
+    flex-basis: 400px;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.navn {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+
 h1 {
     text-align: center;
     font-family: 'futura-pt', sans-serif;
@@ -112,7 +133,7 @@ a:hover {
 
 #indhold {
     box-sizing: border-box;
-    width: 90vw;
+    width: 100vw;
     height: 90vw;
 }
 
@@ -130,7 +151,6 @@ a:hover {
     height: 90vh;
     margin: 0 auto;
     padding: 10px;
-    z-index: 3;
     top: 2vw;
     position: fixed;
 }
@@ -151,6 +171,16 @@ a:hover {
     padding: 10px 0;
 }
 
+#menuknap_front {
+    color: black;
+    display: block;
+    text-align: left;
+    font-size: 3rem;
+    font-family: 'helvetica', sans-serif;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
 #menu {
     transition: transform 0.3s;
     list-style-type: none;
@@ -159,21 +189,23 @@ a:hover {
     width: 300px;
     text-align: left;
     padding-bottom: 20px;
+    z-index: 3;
 }
 
 #burger {
     width: 200px;
-    z-index: 2;
+    z-index: 3;
 }
 
 #menu li {
     padding-top: 30px;
-    display: block;
     text-align: left;
+    z-index: 3;
 }
 
 #menu a {
     font-size: 1rem;
+    border-top: none;
 }
 
 /*-------------------INDEX-------------------*/
@@ -194,8 +226,8 @@ a:hover {
     background-repeat: no-repeat;
 
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 30vw;
+    left: 60vw;
 }
 
 .book {
@@ -206,7 +238,7 @@ a:hover {
 
 
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 45%;
 }
 
@@ -218,6 +250,7 @@ a:hover {
 .info {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-gap: 40px;
     margin: 100px;
 
@@ -296,6 +329,29 @@ a:hover {
     width: auto;
 }
 
+/*-------------------INFO-------------------*/
+.desc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    padding: 20px;
+    align-items: center;
+    margin: 50px;
+}
+
+.info_billede {
+    margin-right: 100px;
+}
+
+.info_text {
+    width: 500px;
+    margin-left: 100px;
+}
+
+.footer_info {
+    background-color: #F2F2F2;
+}
+
 /*-------------------FOOTER-------------------*/
 
 footer {
@@ -314,4 +370,180 @@ footer {
     width: 25px;
     padding: 15px;
     cursor: pointer;
+}
+
+/*-------------------MEDIAQUERIES------------------*/
+
+@media screen and (max-width: 1024px) {
+    .info img {
+        padding-top: 80px;
+    }
+
+    .desc {
+        margin: 0px;
+    }
+
+    .info_billede {
+        margin-right: 100px;
+    }
+
+    .info_text {
+        width: 300px;
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .splash {
+        background-image: url("imgs/pizza_parma.jpg");
+    }
+
+    .front_logo {
+        background-image: url(imgs/logo_tusci.svg);
+        background-size: 200px;
+        width: 190px;
+        height: 100px;
+        left: 25vw;
+        top: 135vw;
+
+    }
+
+    .book {
+        top: 74%;
+        left: 60%;
+        display: none;
+    }
+
+    #section {
+        background-color: white;
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        margin: 10px;
+    }
+
+    .info p {
+        font-size: 1rem;
+        padding: 10px;
+        text-align: center;
+        width: 310px;
+        margin: 0px;
+    }
+
+    .info h2 {
+        text-align: center;
+        padding: 10px;
+        margin: 1px;
+    }
+
+    .info img {
+        padding-top: 10px;
+    }
+
+    #billeder_front {
+        display: none;
+    }
+
+    #billeder_front img {
+        height: auto;
+    }
+
+    .today {
+        font-weight: 900;
+        font-size: 1.4rem;
+    }
+
+    .open {
+        text-align: center;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+        margin: 0px;
+
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        padding: 10px;
+        margin: 10px;
+        font-size: 1rem;
+        margin-top: 180px;
+    }
+
+    /*---------MENUKORT---------*/
+
+    .menu_billede {
+        background-image: url("imgs/risottoLille.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .visteRetter {
+        margin: 20px;
+        margin-top: 30px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 7px 7px 10px 1px #c6c6c6;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    #liste {
+        grid-template-columns: 1fr;
+    }
+
+    .valgt {
+        border-bottom: none;
+        font-weight: 900;
+    }
+
+    nav .filter {
+        display: inline;
+
+        border-top: none;
+        color: #343333;
+        padding: 5px;
+        margin: 1px;
+        font-size: 1rem;
+
+        font-family: 'Open Sans Condensed', sans-serif;
+    }
+
+    /*-----------INFO-----------*/
+    .desc {
+        grid-template-columns: 1fr;
+        margin: 0px;
+        text-align: center;
+    }
+
+    .info_text {
+        width: 300px;
+        margin-left: 0px;
+    }
+
+    .info_billede {
+        margin-right: 0px;
+    }
+
+    .footer_info {
+        background-color: #F2F2F2;
+    }
+
+    /*-------------------BURGERMENU-------------------*/
+
+
+
+    #burger a {
+        margin-top: 1px;
+    }
+
+
+
+
 }

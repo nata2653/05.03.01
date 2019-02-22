@@ -6,7 +6,6 @@ let filter = "alle";
 document.addEventListener("DOMContentLoaded", sidenVises);
 
 function sidenVises() {
-    document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 
     async function getJson() {
         console.log("JSON hentes");
@@ -35,13 +34,16 @@ function sidenVises() {
                 dest.lastElementChild.addEventListener("click", åbn);
 
                 function åbn() {
-                    document.querySelector("#indhold").innerHTML = `<article class="ret">
- <h2>${ret.navn}</h2>
-  <div> <img src="imgs/${ret.billede}.jpg"> </div>
-                            <p><strong> Pris: </strong> ${ret.pris}</p>
-                            <p>${ret.lang}</p>
+                    document.querySelector("#indhold").innerHTML = `
 
-</article>`;
+ <div class="navn"><h2>${ret.navn}</h2></div><div class="ret">
+<div class="sectionwrapper">
+                        <div class="lang"> <p>${ret.lang}</p></div>
+                        <div class="sectionwrapper">      <img src="imgs/${ret.billede}.jpg">
+                   </div>
+<div class="pris"><p><strong> Pris: </strong> ${ret.pris}</p></div>
+                        </div>
+                </div>`;
                     document.querySelector("#popup").style.display = "block";
                 }
             }
@@ -71,6 +73,8 @@ function sidenVises() {
 
     getJson();
     console.log("json");
+
+    document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 }
 
 function toggleMenu() {
