@@ -156,7 +156,8 @@ a:hover {
 }
 
 #popup img {
-    width: 300px;
+    width: auto;
+    height: 350px;
 }
 
 /*-------------------BURGERMENU-------------------*/
@@ -226,7 +227,7 @@ a:hover {
     background-repeat: no-repeat;
 
     position: absolute;
-    top: 30vw;
+    top: 20vw;
     left: 60vw;
 }
 
@@ -250,12 +251,12 @@ a:hover {
 .info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
     grid-gap: 40px;
     margin: 100px;
 
     font-size: 1.2rem;
 }
+
 
 .info p {
     width: 300px;
@@ -513,6 +514,11 @@ footer {
         font-size: 1rem;
 
         font-family: 'Open Sans Condensed', sans-serif;
+    }
+
+    #popup img {
+        width: auto;
+        height: 300px;
     }
 
     /*-----------INFO-----------*/
